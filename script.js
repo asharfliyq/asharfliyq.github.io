@@ -151,7 +151,7 @@ const NUM_FRAMES = 128;
 /**
  * Generates the individual subsets of pixels that are animated to create the effect
  * @param {HTMLCanvasElement} $canvas
- * @param {number} count The higher the frame count, the less grouped the pixels will look - Google use 32, but for our elms we use 128 since we have images near the edges
+ * @param {number} count The higher the frame count, the less grouped the pixels will look - Google use 32, but for our elements we use 128 since we have images near the edges
  * @return {HTMLCanvasElement[]} Each canvas contains a subset of the original pixels
  */
 function generateFrames($canvas, count = 32) {
@@ -238,6 +238,10 @@ rotate(${15 * (Math.random() - 0.5)}deg)`;
         $frame.style.animation = `debug-pulse 1s ease ${$frame.style.transitionDelay} infinite alternate`;
       });
     }
+  }).catch(error => {
+    // If html2canvas fails, gracefully hide the element without animation
+    console.error('Failed to render canvas for disintegration:', error);
+    messageEl.style.opacity = 0;
   });
 }
 
