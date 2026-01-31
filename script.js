@@ -175,10 +175,14 @@ function handleClick() {
 
 // initialize
 function init() {
+  // Show initial message as if first click happened
   clickCount = 1;
   const initialMessage = getMessageByProgression();
   messageEl.textContent = initialMessage;
   btn.addEventListener("click", handleClick);
 }
+
+// Note: clickCount starts at 1 after init(), so first button click increments to 2.
+// This is intentional: initial page load = click 1, first button press = click 2.
 
 init();
