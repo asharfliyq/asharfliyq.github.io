@@ -12,5 +12,20 @@ const tierD = [
   "nothing else is needed",
   "we can stop here",
   "it's okay to leave now",
-  "see you another time"
+  "see you another time",
+   "that’s it",
+  "we’re done here",
+  "this is the end",
+  "nothing more will happen",
+  "this stops now",
+  "the moment has passed",
+  "this is complete",
+  "the page has finished",
+  "time to close this",
+  "this concludes things",
+  "no more messages",
+  "this has ended",
+  "the pause is over",
+  "this is where it ends",
+  "everything stops here"
 ];
