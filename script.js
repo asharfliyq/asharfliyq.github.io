@@ -206,7 +206,7 @@ function replaceElementVisually($old, $new) {
  * Thanos snap / disintegration effect - canvas-based pixel dissolution
  */
 function disintegrateMessage() {
-  html2canvas(messageEl).then($canvas => {    
+  html2canvas(messageEl, { backgroundColor: 'transparent' }).then($canvas => {    
     // create the container we'll use to replace the element with
     const $container = document.createElement("div");
     $container.classList.add("disintegration-container");
